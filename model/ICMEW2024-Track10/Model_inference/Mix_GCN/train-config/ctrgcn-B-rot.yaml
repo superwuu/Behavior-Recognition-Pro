@@ -1,0 +1,51 @@
+work_dir: ./output-train/ctrgcn-B-rot
+
+# feeder
+feeder: dataset.feeder_xyz.Feeder
+train_feeder_args: 
+  data_path: data/train_bone.npz
+  data_split: train
+  p_interval: [0.5, 1]
+  window_size: 64
+  bone: True
+  vel: False
+  random_choose: False
+  random_shift: False
+  random_move: False
+  random_rot: True
+
+test_feeder_args:
+  data_path: data/train_bone.npz
+  data_split: test
+  p_interval: [0.95]
+  window_size: 64
+  bone: True
+  vel: False
+  random_choose: False
+  random_shift: False
+  random_move: False
+  random_rot: False
+
+# model
+model: model.ctrgcn_xyz.Model
+model_args:
+  num_class: 155
+  num_point: 17
+  num_person: 2
+  graph: graph.Simcc.Graph
+  graph_args:
+    labeling_mode: 'spatial'
+
+#optim
+weight_decay: 0.0004
+base_lr: 0.4
+lr_decay_rate: 0.1
+step: [35, 55, 85, 115]
+warm_up_epoch: 5
+
+# training
+device: [3, 4]
+batch_size: 256
+test_batch_size: 256
+num_epoch: 125
+nesterov: True

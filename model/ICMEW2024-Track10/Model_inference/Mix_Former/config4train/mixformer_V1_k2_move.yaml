@@ -1,0 +1,79 @@
+# command line: main.py --config config/uav-csv1/default.yaml --work-dir work_dir/uav1/skmixf_k2 --device 0 1
+
+# 训练
+# python main.py --config /media/sdd/robot/ICMEW2024-Track10/Model_inference/Mix_Former/config/mixformer_V1_k2.yaml --device 2 3
+
+# python main.py --config /media/sdd/robot/ICMEW2024-Track10/Model_inference/Mix_Former/config/mixformer_V1_k2.yaml --phase test --save-score True --weights /media/sdd/robot/ICMEW2024-Track10/Model_inference/Mix_Former/output/skmixf__V1_k2/runs-56-1792.pt --device 0 1 2 3
+# /media/sdd/robot/ICMEW2024-Track10/Model_inference/Mix_Former/output/skmixf__V1_k2/runs-56-1792.pt
+
+# 推理 69.60
+# /media/sdd/robot/ICMEW2024-Track10/Model_inference/Mix_Former/output/skmixf__V1_k2_enhance/runs-56-3584.pt
+# python main.py --config ./config/mixformer_V1_k2.yaml --phase test --save-score True --weights /media/sdd/robot/ICMEW2024-Track10/Model_inference/Mix_Former/output/skmixf__V1_k2_enhance/runs-56-3584.pt --device 0 1 2 3
+
+# 双增强 42.9
+
+
+base_lr: 0.3
+batch_size: 128
+config: config/uav-csv1/default.yaml
+device:
+- 0
+- 1
+eval_interval: 5
+feeder: feeders.feeder_uav.Feeder
+ignore_weights: []
+log_interval: 100
+model: model.ske_mixfk2.Model
+model_args:
+  graph: graph.uav.Graph
+  graph_args:
+    labeling_mode: spatial
+  num_class: 155
+  num_person: 2
+  num_point: 17
+model_saved_name: ''
+nesterov: true
+num_epoch: 68
+num_worker: 32
+optimizer: SGD
+phase: train
+print_log: true
+save_epoch: 30
+save_interval: 1
+save_score: True
+seed: 1
+show_topk:
+- 1
+- 5
+start_epoch: 0
+step:
+- 50
+test_batch_size: 128
+test_feeder_args:
+  bone: false
+  data_path: /media/sdd/robot/guosai-data/train/train_joint.npz
+  debug: false
+  p_interval:
+  - 0.95
+  split: test
+  vel: false
+  window_size: 64
+train_feeder_args:
+  bone: false
+  data_path: /media/sdd/robot/guosai-data/train/train_joint.npz
+  debug: false
+  normalization: false
+  p_interval:
+  - 0.5
+  - 1
+  random_choose: False
+  random_move: True
+  random_rot: False
+  random_shift: False
+  split: train
+  vel: false
+  window_size: 64
+warm_up_epoch: 5
+weight_decay: 0.0005
+weights: null
+work_dir: ./output_phase2/skmixf__V1_k2_enhance_move

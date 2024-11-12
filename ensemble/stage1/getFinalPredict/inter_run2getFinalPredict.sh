@@ -1,0 +1,21 @@
+python inter_getFinalPredict.py \
+--mixformer_J_Score /media/sdd/robot/wait2ensembleData/inter-testB/skmixf-J.pkl \
+--mixformer_B_Score /media/sdd/robot/wait2ensembleData/inter-testB/skmixf-B.pkl \
+--mixformer_JM_Score /media/sdd/robot/wait2ensembleData/inter-testB/skmixf-JM.pkl \
+--mixformer_BM_Score /media/sdd/robot/wait2ensembleData/inter-testB/skmixf-BM.pkl \
+--tegcn_J_Score /media/sdd/robot/wait2ensembleData/inter-testB/tegcn-J.pkl \
+--tegcn_B_Score /media/sdd/robot/wait2ensembleData/inter-testB/tegcn-B.pkl \
+--mixformer_k2_Score /media/sdd/robot/wait2ensembleData/inter-testB/skkmixf-J.pkl \
+--mixformer_k2M_Score /media/sdd/robot/wait2ensembleData/inter-testB/skkmixf-B.pkl \
+--ctrgcn_J2d_Score /media/sdd/robot/wait2ensembleData/inter-testB/ctrgcn-J.pkl \
+--ctrgcn_B2d_Score /media/sdd/robot/wait2ensembleData/inter-testB/ctrgcn-B.pkl \
+--ctrgcn_JM3d_Score /media/sdd/robot/wait2ensembleData/inter-testB/ctrgcn-JM.pkl \
+--ctrgcn_BM3d_Score /media/sdd/robot/wait2ensembleData/inter-testB/ctrgcn-BM.pkl \
+--tdgcn_J2d_Score /media/sdd/robot/wait2ensembleData/inter-testB/tdgcn-J.pkl \
+--tdgcn_B2d_Score /media/sdd/robot/wait2ensembleData/inter-testB/tdgcn-B.pkl \
+--tdgcn_JM2d_Score /media/sdd/robot/wait2ensembleData/inter-testB/tdgcn-JM.pkl \
+--tdgcn_BM2d_Score /media/sdd/robot/wait2ensembleData/inter-testB/tdgcn-BM.pkl \
+--mstgcn_J2d_Score /media/sdd/robot/wait2ensembleData/inter-testB/mstgcn-J.pkl \
+--mstgcn_B2d_Score /media/sdd/robot/wait2ensembleData/inter-testB/mstgcn-B.pkl \
+--mstgcn_JM2d_Score /media/sdd/robot/wait2ensembleData/inter-testB/mstgcn-JM.pkl \
+--mstgcn_BM2d_Score /media/sdd/robot/wait2ensembleData/inter-testB/mstgcn-BM.pkl

@@ -1,0 +1,71 @@
+# command line: main.py --config train-config/tdgcn-J.yaml
+
+base_lr: 0.2
+batch_size: 256
+config: train-config/tdgcn-J.yaml
+device:
+- 0
+- 1
+eval_interval: 5
+feeder: dataset.feeder_xyz.Feeder
+ignore_weights: []
+log_interval: 100
+lr_decay_rate: 0.1
+model: model.tdgcn_xyz.Model
+model_args:
+  graph: graph.Simcc.Graph
+  graph_args:
+    labeling_mode: spatial
+  num_class: 155
+  num_person: 2
+  num_point: 17
+model_saved_name: ''
+nesterov: true
+num_epoch: 120
+num_worker: 8
+optimizer: SGD
+phase: train
+print_log: true
+save_epoch: 30
+save_interval: 1
+save_score: false
+seed: 1
+show_topk:
+- 1
+- 5
+start_epoch: 0
+step:
+- 30
+- 55
+- 80
+- 105
+test_batch_size: 256
+test_feeder_args:
+  bone: false
+  data_path: data/train_joint.npz
+  data_split: test
+  p_interval:
+  - 0.95
+  random_choose: false
+  random_move: false
+  random_rot: false
+  random_shift: false
+  vel: false
+  window_size: 64
+train_feeder_args:
+  bone: false
+  data_path: data/train_joint.npz
+  data_split: train
+  p_interval:
+  - 0.5
+  - 1
+  random_choose: false
+  random_move: true
+  random_rot: false
+  random_shift: false
+  vel: false
+  window_size: 64
+warm_up_epoch: 5
+weight_decay: 0.0008
+weights: null
+work_dir: ./output-train/tdgcn-J-move

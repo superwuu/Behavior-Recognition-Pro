@@ -1,0 +1,2 @@
+[ Thu Nov  7 18:52:25 2024 ] Load weights from train-pt/tdgcn-B-noEnhance.pt.
+[ Thu Nov  7 18:52:26 2024 ] using warm up, epoch: 5

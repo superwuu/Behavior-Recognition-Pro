@@ -1,0 +1,2 @@
+[ Thu Nov  7 11:33:52 2024 ] Load weights from train-pt/mstgcn-J-shift.pt.
+[ Thu Nov  7 11:33:53 2024 ] using warm up, epoch: 5

@@ -1,0 +1,2 @@
+[ Thu Nov  7 11:34:06 2024 ] Load weights from train-pt/ctrgcn-B-move.pt.
+[ Thu Nov  7 11:34:07 2024 ] using warm up, epoch: 5

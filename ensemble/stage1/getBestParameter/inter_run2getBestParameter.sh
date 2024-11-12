@@ -1,0 +1,22 @@
+python inter_getBestParameter.py \
+--mixformer_J_Score /media/sdd/robot/wait2ensembleData/inter-val/skmixf-J.pkl \
+--mixformer_B_Score /media/sdd/robot/wait2ensembleData/inter-val/skmixf-B.pkl \
+--mixformer_JM_Score /media/sdd/robot/wait2ensembleData/inter-val/skmixf-JM.pkl \
+--mixformer_BM_Score /media/sdd/robot/wait2ensembleData/inter-val/skmixf-BM.pkl \
+--tegcn_J_Score /media/sdd/robot/wait2ensembleData/inter-val/tegcn-J.pkl \
+--tegcn_B_Score /media/sdd/robot/wait2ensembleData/inter-val/tegcn-B.pkl \
+--mixformer_k2_Score /media/sdd/robot/wait2ensembleData/inter-val/skkmixf-J.pkl \
+--mixformer_k2M_Score /media/sdd/robot/wait2ensembleData/inter-val/skkmixf-B.pkl \
+--ctrgcn_J2d_Score /media/sdd/robot/wait2ensembleData/inter-val/ctrgcn-J.pkl \
+--ctrgcn_B2d_Score /media/sdd/robot/wait2ensembleData/inter-val/ctrgcn-B.pkl \
+--ctrgcn_JM3d_Score /media/sdd/robot/wait2ensembleData/inter-val/ctrgcn-JM.pkl \
+--ctrgcn_BM3d_Score /media/sdd/robot/wait2ensembleData/inter-val/ctrgcn-BM.pkl \
+--tdgcn_J2d_Score /media/sdd/robot/wait2ensembleData/inter-val/tdgcn-J.pkl \
+--tdgcn_B2d_Score /media/sdd/robot/wait2ensembleData/inter-val/tdgcn-B.pkl \
+--tdgcn_JM2d_Score /media/sdd/robot/wait2ensembleData/inter-val/tdgcn-JM.pkl \
+--tdgcn_BM2d_Score /media/sdd/robot/wait2ensembleData/inter-val/tdgcn-BM.pkl \
+--mstgcn_J2d_Score /media/sdd/robot/wait2ensembleData/inter-val/mstgcn-J.pkl \
+--mstgcn_B2d_Score /media/sdd/robot/wait2ensembleData/inter-val/mstgcn-B.pkl \
+--mstgcn_JM2d_Score /media/sdd/robot/wait2ensembleData/inter-val/mstgcn-JM.pkl \
+--mstgcn_BM2d_Score /media/sdd/robot/wait2ensembleData/inter-val/mstgcn-BM.pkl \
+--val_sample /media/sdd/robot/wait2ensembleData/inter-val/val_label.npy
