@@ -1,6 +1,6 @@
 # 【算法挑战赛】基于无人机的人体行为识别——国赛仓库
 
-- **百度网盘链接：**https://pan.baidu.com/s/1EVJnTb9U2xShelBH7BboxQ?pwd=inuc
+- **百度网盘链接：** https://pan.baidu.com/s/1EVJnTb9U2xShelBH7BboxQ?pwd=inuc
 
   ------
 
@@ -12,7 +12,7 @@
     - （3）创新了自适应模型集成权重选择算法，更加合理与高效地进行模型集成；
     - （4）创新清晰集与模糊集分类设想，提高了模型的预测准确率。
 
-  ![](C:\Users\37339\Desktop\AB\guosai\github\pic\架构.png)
+  ![](.\pic\架构.png)
 
   ------
 
